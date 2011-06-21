@@ -1,0 +1,229 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A3E4DBF-12AD-4636-ACB3-24B5172FAE03}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>STPTests</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>STPTests</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/STPTests/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestParallelMethods.cs" />
+    <Compile Include="TestFalseFillStateWithParams.cs" />
+    <Compile Include="TestFillStateWithParams.cs" />
+    <Compile Include="TestWIGFillStateWithParams.cs" />
+    <Compile Include="TestWIGActionT.cs" />
+    <Compile Include="TestWIGFuncT.cs" />
+    <Compile Include="TestActionT.cs" />
+    <Compile Include="TestFuncT.cs" />
+    <Compile Include="TestWIGQueueWorkItem.cs" />
+    <Compile Include="QueueWorkItemHelper.cs" />
+    <Compile Include="TestQueueWorkItem.cs" />
+    <Compile Include="TestCancel.cs" />
+    <Compile Include="TestConcurrencyChanges.cs" />
+    <Compile Include="PermutationGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestChainedDelegates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestThreadsCreate.cs" />
+    <Compile Include="TestWIGConcurrencyChanges.cs" />
+    <Compile Include="TestExceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestGetResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestMultipleWorkItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPostExecute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPriorityQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestStartSuspended.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestStateDispose.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestThreadPriority.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWaitForIdle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWIGChainedDelegates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWIGConcurrency.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWIGExceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWIGGetResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWIGMultipleWorkItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWIGPostExecute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWIGStateDispose.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWIGWaitForIdle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWorkItemsGroups.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWorkItemsQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestWorkItemTimeout.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartThreadPool\SmartThreadPool.csproj">
+      <Project>{74D4C33F-7CC8-4B2A-A7DF-D8B6E63B6EBD}</Project>
+      <Name>SmartThreadPool</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
