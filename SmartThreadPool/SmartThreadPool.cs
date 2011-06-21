@@ -622,11 +622,11 @@ namespace Amib.Threading
 #if !(_SILVERLIGHT)
 					workerThread.Priority = _stpStartInfo.ThreadPriority;
 #endif
-					workerThread.Start();
-					++_threadCounter;
-
                     // Add it to the dictionary and update its creation time.
                     _workerThreads[workerThread] = new ThreadEntry(this);
+                    
+                    workerThread.Start();
+					++_threadCounter;
 
 					_windowsPCs.SampleThreads(_workerThreads.Count, _inUseWorkerThreads);
                     _localPCs.SampleThreads(_workerThreads.Count, _inUseWorkerThreads);
