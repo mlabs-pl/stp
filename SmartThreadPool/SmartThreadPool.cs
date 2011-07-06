@@ -623,6 +623,7 @@ namespace Amib.Threading
 					workerThread.Priority = _stpStartInfo.ThreadPriority;
 #endif
 					workerThread.Start();
+					workerThread.SetApartmentState(_stpStartInfo.ThreadApartmentState);
 					++_threadCounter;
 
                     // Add it to the dictionary and update its creation time.
