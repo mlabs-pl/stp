@@ -210,26 +210,26 @@ namespace WorkItemsGroupDemo
             // 
             this._pcActiveThreads.CategoryName = "SmartThreadPool";
             this._pcActiveThreads.CounterName = "Active threads";
-            this._pcActiveThreads.InstanceName = "Test SmartThreadPool";
+            this._pcActiveThreads.InstanceName = "wig test smartthreadpool";
             // 
             // pcInUseThreads
             // 
             this._pcInUseThreads.CategoryName = "SmartThreadPool";
             this._pcInUseThreads.CounterName = "In use threads";
-            this._pcInUseThreads.InstanceName = "Test SmartThreadPool";
+            this._pcInUseThreads.InstanceName = "wig test smartthreadpool";
             // 
             // pcQueuedWorkItems
             // 
             this._pcQueuedWorkItems.CategoryName = "SmartThreadPool";
             this._pcQueuedWorkItems.CounterName = "Work Items in queue";
-            this._pcQueuedWorkItems.InstanceName = "Test SmartThreadPool";
+            this._pcQueuedWorkItems.InstanceName = "wig test smartthreadpool";
             // 
             // pcCompletedWorkItems
             // 
             this._pcCompletedWorkItems.CategoryName = "SmartThreadPool";
             this._pcCompletedWorkItems.CounterName = "Work Items processed";
-            this._pcCompletedWorkItems.InstanceName = "Test SmartThreadPool";
-
+            this._pcCompletedWorkItems.InstanceName = "wig test smartthreadpool";
+            
             _getActiveThreads = () => (long)_pcActiveThreads.NextValue();
             _getInUseThreads = () => (long)_pcInUseThreads.NextValue();
             _getQueuedWorkItems = () => (long)_pcQueuedWorkItems.NextValue();
