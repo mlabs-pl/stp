@@ -27,6 +27,7 @@
     <Optimize>true</Optimize>
     <OutputPath>.\bin\Release\</OutputPath>
     <DefineConstants>TRACE;_WINDOWS</DefineConstants>
+    <DocumentationFile>bin\Release\SmartThreadPool.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
