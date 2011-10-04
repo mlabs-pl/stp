@@ -531,7 +531,14 @@ namespace Amib.Threading
 			if (count == 1) 
 			{
                 IsIdle = false;
-                _isIdleWaitHandle.Reset();
+			    try
+			    {
+			        _isIdleWaitHandle.Reset();
+			    }
+			    catch (ObjectDisposedException)
+                {
+                    //catch ObjectDisposedException to prevent exc throwing when shuting down thread pool
+			    }
 			}
 		}
 
@@ -542,7 +549,14 @@ namespace Amib.Threading
             if (count == 0)
             {
                 IsIdle = true;
-                _isIdleWaitHandle.Set();
+                try
+                {
+                    _isIdleWaitHandle.Set();
+                }
+                catch (ObjectDisposedException)
+                {
+                    //catch ObjectDisposedException to prevent exc throwing when shuting down thread pool
+                }
             }
 
             Interlocked.Increment(ref _workItemsProcessed);
@@ -1413,7 +1427,7 @@ namespace Amib.Threading
                 if (null != _isIdleWaitHandle)
                 {
                     _isIdleWaitHandle.Close();
-                    _isIdleWaitHandle = null;
+                    //_isIdleWaitHandle = null;
                 }
 
                 _isDisposed = true;
