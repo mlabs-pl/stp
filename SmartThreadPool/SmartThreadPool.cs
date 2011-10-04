@@ -631,6 +631,7 @@ namespace Amib.Threading
 					Thread workerThread = new Thread(ProcessQueuedItems);
 
 					// Configure the new thread and start it
+					workerThread.SetApartmentState(_stpStartInfo.ThreadApartmentState);
 					workerThread.Name = "STP " + Name + " Thread #" + _threadCounter;
                     workerThread.IsBackground = _stpStartInfo.AreThreadsBackground;
 #if !(_SILVERLIGHT)

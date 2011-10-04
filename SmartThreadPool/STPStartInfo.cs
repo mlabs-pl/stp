@@ -24,6 +24,7 @@ namespace Amib.Threading
             _maxWorkerThreads = SmartThreadPool.DefaultMaxWorkerThreads;
             _idleTimeout = SmartThreadPool.DefaultIdleTimeout;
             _minWorkerThreads = SmartThreadPool.DefaultMinWorkerThreads;
+	    	ThreadApartmentState = ApartmentState.MTA;
         }
 
 	    public STPStartInfo(STPStartInfo stpStartInfo)
@@ -37,6 +38,7 @@ namespace Amib.Threading
             _enableLocalPerformanceCounters = stpStartInfo._enableLocalPerformanceCounters;
             _threadPoolName = stpStartInfo._threadPoolName;
             _areThreadsBackground = stpStartInfo.AreThreadsBackground;
+	    	ThreadApartmentState = stpStartInfo.ThreadApartmentState;
         }
 
 	  
@@ -152,7 +154,9 @@ namespace Amib.Threading
  	        }
  	    }
 
-	    /// <summary>
+		public ApartmentState ThreadApartmentState { get; set; }
+
+		/// <summary>
         /// Get a readonly version of this STPStartInfo.
         /// </summary>
         /// <returns>Returns a readonly reference to this STPStartInfo</returns>
